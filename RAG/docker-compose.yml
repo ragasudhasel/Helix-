@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./chroma_db:/app/chroma_db
+      - ./srop.db:/app/srop.db
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:////app/srop.db
+      - CHROMA_PATH=/app/chroma_db

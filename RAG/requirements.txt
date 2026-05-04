@@ -1,0 +1,27 @@
+# Core
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+
+# Database
+sqlalchemy[asyncio]
+aiosqlite
+
+# Google ADK
+google-adk
+google-genai
+
+# RAG / Vector store
+chromadb
+python-frontmatter
+tiktoken
+
+# Testing
+pytest==8.3.5
+pytest-asyncio==0.26.0
+httpx==0.28.1
+
+# Linting
+ruff==0.11.10
